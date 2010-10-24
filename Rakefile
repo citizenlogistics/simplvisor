@@ -6,10 +6,10 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "simplvisor"
     gem.summary = %Q{a simpler & more opinionated DSL for bluepill, god, etc}
-    gem.description = %Q{TODO: longer description of your gem}
     gem.email = "joe@citizenlogistics.com"
     gem.homepage = "http://github.com/citizenlogistics/simplvisor"
-    gem.authors = ["Citizen Logistics, Inc."]
+    gem.authors = ["Joe Edelman"]
+    gem.add_dependency "bluepill", ">= 0"
     gem.add_development_dependency "minitest", ">= 0"
     gem.add_development_dependency "yard", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
