@@ -1,0 +1,4 @@
+rake -v0.8.7
+bluepill -v0.0.44
+minitest -v1.7.2
+jeweler -v1.4.0
