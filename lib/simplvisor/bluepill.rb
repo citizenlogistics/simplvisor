@@ -1,5 +1,7 @@
 require 'bluepill'
 FileUtils.mkdir_p 'log'
+FileUtils.mkdir_p '/tmp/bluepill/socks'
+FileUtils.mkdir_p '/tmp/bluepill/pids'
 
 module Simplvisor
   WATCHES = []
@@ -8,7 +10,7 @@ module Simplvisor
   def self.run_bluepill
     Bluepill.application(ARGV[0] || 'app',
       :log_file => "#{PWD}/log/bluepill.log",
-      :base_dir => '/tmp',
+      :base_dir => '/tmp/bluepill',
       :foreground => true
     ) do |app|
       WATCHES.each do |cmdline, options|
