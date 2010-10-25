@@ -2,6 +2,16 @@
 
 a simpler & more opinionated DSL for bluepill, god, etc
 
+== Example
+
+  #!/usr/bin/env -S ruby -rubygems
+  require 'simplvisor/bluepill'
+
+  watch "unicorn -c ../config/unicorn.conf"
+  watch "pegasus boot.rb"
+  watch "redis-server ../config/redis.conf"
+
+
 == Copyright
 
 Copyright (c) 2010 Citizen Logistics, Inc.. See LICENSE for details.
