@@ -17,7 +17,7 @@ module Simplvisor
         name = options[:name] || File.basename(cmdline.split.first)
         app.process(name) do |x|
           x.working_dir   = PWD
-          x.start_command = cmdline
+          x.start_command = "bundle exec #{cmdline}"
           x.pid_file      = options[:pid] || "#{PWD}/log/#{name}.pid"
           x.daemonize     = true unless options[:reckless]
           x.stdout        = "#{PWD}/log/#{name}-out.log"
